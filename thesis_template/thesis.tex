@@ -21,10 +21,27 @@
 % An macro that you may use frequently is the figuremacro (see introduction.tex)
 \include{Latex/Macros/MacroFile1}
 \usepackage{nicefrac}
-\usepackage[inner=0.75in,outer=0.65in,top=0.75in,bottom=0.75in]{geometry}
+%\usepackage[inner=0.75in,outer=0.65in,top=0.75in,bottom=0.75in]{geometry}
+\usepackage{geometry}
 \usepackage[sc]{mathpazo}
 \usepackage{multirow}
+\usepackage{natbib}
 
+%----------------------------------------------------------------------------------------
+%	MARGIN SETTINGS // UMaT Thesis Guide
+%----------------------------------------------------------------------------------------
+
+\geometry{
+	paper=a4paper, % Change to letterpaper for US letter
+	inner=0.0cm, % Inner margin
+	outer=0.0cm, % Outer margin
+	%bindingoffset=.5cm, % Binding offset
+	top=2.54cm, % Top margin
+	bottom=2.54cm, % Bottom margin
+	right=2.54cm, % Right margin
+	left=3.05cm % Left margin, to allow space for binding UMaT, Tarkwa
+	%showframe, % Uncomment to show how the type block is set on the page
+}
 
 %: ----------------------------------------------------------------------
 %:                  TITLE PAGE: name, degree,..
@@ -46,7 +63,7 @@
 \fi
 
 
-\title{Title of your thesis}
+\title{Development of an Efficient Public Transport Search Portal for Ghana}
 
 
 
@@ -54,16 +71,18 @@
 % The section below defines www links/email for author and institutions
 % They will appear on the title page of the PDF and can be clicked
 \ifpdf
-  \author{\href{mailto:your@email.net}{YourName}}
+  %\author{\href{mailto:your@email.net}{Your Name}}
+  \author{{Enock Seth Nyamador}}
 %  \cityofbirth{born in XYZ} % uncomment this if your university requires this
 %  % If city of birth is required, also uncomment 2 sections in PhDthesisPSnPDF
 %  % Just search for the "city" and you'll find them.
-  \collegeordept{\href{http://www.something.net}{CollegeOrDepartment}}
-  \university{\href{http://www.something.net}{University}}
-
+%  \collegeordept{\href{http://www.something.net}{CollegeOrDepartment}}
+ \collegeordept{{Department of Computer Science and Engineering}}
+%  \university{\href{http://www.something.net}{University}}
+\university{{University of Mines and Technology}}
   % The crest is a graphics file of the logo of your research institution.
   % Place it in ./0_frontmatter/figures and specify the width
-  \crest{\includegraphics[width=4cm]{logo}}
+  \crest{\includegraphics[width=4cm]{umatlogo}}
   
 % If you are not creating a PDF then use the following. The default is PDF.
 \else
@@ -76,7 +95,7 @@
 
 %\renewcommand{\submittedtext}{change the default text here if needed}
 \degree{Bachelor of Science }
-\degreedate{year month}
+\degreedate{May, 2018}
 
 
 % ----------------------------------------------------------------------
@@ -178,13 +197,9 @@
 
 \include{1_introduction/introduction}	% background information
 \include{2/Chapter2}						% aims of the project
-
-\include{7/discussion}               % discussion of results
-
-\include{8/materials_methods}        % description of lab methods
-
-
-
+\include{3/Chapter3}						% system design and analysis
+\include{4/Chapter4}
+\include{5/Chapter5}
 
 % --------------------------------------------------------------
 %:                  BACK MATTER: appendices, refs,..
@@ -200,16 +215,16 @@
 % Entries are also linked back to the page number in the text and to external URL if provided in the BibTex file.
 
 % PhDbiblio-url2 = names small caps, title bold & hyperlinked, link to page 
-\begin{multicols}{2} % \begin{multicols}{ # columns}[ header text][ space]
-\begin{tiny} % tiny(5) < scriptsize(7) < footnotesize(8) < small (9)
+%\begin{multicols}{2} % \begin{multicols}{ # columns}[ header text][ space]
+%\begin{tiny} % tiny(5) < scriptsize(7) < footnotesize(8) < small (9)
 
-\bibliographystyle{Latex/Classes/PhDbiblio-url2} % Title is link if provided
+\bibliographystyle{agsm} % Title is link if provided
 \renewcommand{\bibname}{References} % changes the header; default: Bibliography
 
 \bibliography{9_backmatter/references} % adjust this to fit your BibTex file
 
-\end{tiny}
-\end{multicols}
+%\end{tiny}
+%\end{multicols}
 
 % --------------------------------------------------------------
 % Various bibliography styles exit. Replace above style as desired.
