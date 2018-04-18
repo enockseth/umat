@@ -25,6 +25,7 @@
 \setbeamertemplate{blocks}[rounded][shadow=true]
 \setbeamercolor{page number in head/foot}{fg=black}
 \setbeamerfont{page number in head/foot}{}
+\setbeamertemplate{caption}[numbered]
 
 
 \logo{\includegraphics[width=0.8cm]{figures/umatlogo}}
@@ -50,89 +51,82 @@
 	
 	\frame{
 		\frametitle{PROBLEM DEFINITION}
+		\large
 			\begin{itemize}[label=$ \bullet $]
-				\item Road transport is the major means of transportation in Ghana \citep{aidoo_passengers_2013}
-				\vspace{0.3cm}
-				\item Over $ 95\% $ of all passenger and freight traffic and about $ 97\% $ of all passenger miles in Ghana is by road \citep{unesco_transportation:_????}
-				\vspace{0.3cm}
+				\item Road transport is the major means of transportation in Ghana, \citep{aidoo_passengers_2013}.
+				\vspace{0.2cm}
+				\item Over 95\%  of all passenger and freight traffic and about 97\% of all passenger miles in Ghana is by road, \citep{unesco_transportation:_????}.
+				\vspace{0.2cm}
 				%\item Vast majority of passengers commuting between places mostly rely on public transport services in the form of privately owned or corporate taxis, \textit{tro tros} (shared minivans), buses commuting between major cities \citep{abane2011travel}
-				\item Privately owned or corporate taxis, \textit{tro tros} (shared minivans), buses commuting between major cities \citep{abane2011travel}
-				\vspace{0.3cm}
-				\item Difficulty in finding terminals specific location and detailed information
-				\vspace{0.3cm}
-				\item Fares and stations keep changing
+				\item Privately owned or corporate taxis, \textit{tro tros} (shared minivans), buses commuting between major cities, \citep{abane2011travel}.
 			\end{itemize}
 	}
 
 
+
+
+\frame{
+	\frametitle{PROBLEM DEFINITION (CONT'D)}
+	\large
+	\begin{itemize}[label=$ \bullet $]
+		\item The transport industry is currently dominated by the 
+		informal sector which provides about 90\% of transport services but their services are unreliable and uncomfortable \citep{bonaventura_assessment_2015}.
+		\vspace{0.2cm}
+		\item Individually or privately operated transport services are members of unions or associations. These unions and associations serve as regulatory and mouth-piece to each of their members \citep{fouracre1994public}.
+		
+	\end{itemize}
+}
+
+
+		\frame{
+	\frametitle{PROBLEM DEFINITION (CONT'D)}
+	\LARGE
+	\begin{block}{Challenges}
+		\begin{itemize}[label=$ \star $]
+\item Difficulty in finding terminals specific location and detailed information.
+\vspace{0.3cm}
+\item Fares and stations keep changing.
+		\end{itemize}
+	\end{block}
+	
+}
+
+
 	\frame{
 		\frametitle{PROBLEM DEFINITION (CONT'D)}
-		\begin{block}{Figure 1: Kaneshie Transport Terminal}
+		\begin{block}{Typical Ghanaian Transport Terminal}
 					\begin{figure}
-					\centering
-					\includegraphics[width=0.8\linewidth]{figures/kaneshe}
-%					\caption{}
+					\includegraphics[width=0.7\linewidth]{figures/kaneshe}
+					\caption{Kaneshie Transport Terminal}
 					\label{fig2:kaneshe}
 					\end{figure}
 		\end{block}
-	}
+}
 		
-		\frame{
-		\frametitle{STATE OF PUBLIC TRANSPORT IN GHANA - PROBLEM DEFINITION (CONT'D)}
-		\begin{itemize}[label=$ \star $]
-			\item The transport industry is currently dominated by the 
-			informal sector which provides about 90\% of transport services but their services are unreliable and uncomfortable \cite{bonaventura_assessment_2015}
-			\vspace{0.5cm}
-			\item Individually or privately operated transport services are members of unions or
-			associations. These unions and associations serve as regulatory and mouth-piece
-			to each of their members \citep{fouracre1994public}
-		\end{itemize}
-		
-	}
-	
 	
 	\section{Project Objectives}
 	\frame{
 		\frametitle{PROJECT OBJECTIVES}
+		\LARGE
 %		\begin{block}{This project seeks to:}
 			\begin{itemize}[label=$ \star $]
-				\item To develop a web application that provides detailed information about public transport routes in Ghana
+				\item To develop a web application that provides detailed information about public transport routes in Ghana.
 %				\begin{itemize}[label=$ \ast $]
 %					\item To mitigate the difficulty in finding transport terminals and improve trip planning
-%					\item To provide reusable data and a cross platform system by implementing a geospatial database containing exact location of transport terminals
+\vspace{0.5cm}
+					\item To provide reusable geospatial data on transport terminals.
 %				\end{itemize}
 			\end{itemize}
 %		\end{block}
 	}
 	
-	\section{Tools Used}
-
-\frame{
-	\frametitle{TOOLS USED}
-%	\begin{block}{The tools used for this project are:}
-		\begin{itemize}[label=$ \star $]
-			\item Python
-			\vspace{0.5cm}
-			\item Django
-			\vspace{0.5cm}
-			\item Material Kit
-			\vspace{0.5cm}
-			\item PostgreSQL
-			\vspace{0.5cm}
-			\item QGIS
-			\vspace{0.5cm}
-			\item Leaflet and OpenStreetMap
-			\vspace{0.5cm}
-			\item GPS receiver and Smartphone
-		\end{itemize}
-%	\end{block}
-}
 
 	
 	\section{Methodology}
 	
 	\frame{
 		\frametitle{METHODOLOGY}
+		\LARGE
 %		\begin{block}{Methods used for this project:}
 			\begin{itemize}[label=$ \ast $]
 				\item Review of related literature
@@ -143,7 +137,7 @@
 				\vspace{0.5cm}
 				\item Functional and non-functional requirements
 				\vspace{0.5cm}
-				\item Data Collection
+				\item Performing data Collection
 		\end{itemize}
 %	\end{block}
 	}
@@ -187,7 +181,7 @@
 	\frame{
 	\frametitle{CONDUCTING FEASIBILITY STUDIES}
 	\Large
-\begin{block}{Areas Considered:}
+\begin{block}{Areas considered:}
 	\begin{itemize}[label=$ \bullet $]
 		\item Technical feasibility.
 		\vspace{0.5cm}
@@ -203,13 +197,13 @@
 	\frame{
 	\frametitle{REQUIREMENTS GATHERING AND ANALYSIS}
 	\Large
-	\begin{block}{Answers to these questions must be provided to ensure that the system can thrive:}
+	\begin{block}{Questions that must be answered to ensure that the system can survive:}
 		\begin{itemize}[label=$ \star $]		
-			\uncover<2->{\item Where is the system going to be used?}
-			\uncover<3->{\item Who is going to use the system?}
-			\uncover<4->{\item What data should be input into the system?}
-			\uncover<5->{\item What Software Development Life Cycle(SDLC) model to be used?}
-			\uncover<5->{\item What type of output information will the system give?}
+			\uncover<1->{\item Where is the system going to be used?}
+			\uncover<2->{\item Who is going to use the system?}
+			\uncover<3->{\item What data should be input into the system?}
+			\uncover<4->{\item What Software Development Life Cycle (SDLC) model to be used?}
+			\uncover<6->{\item What type of output information will the system give?}
 		\end{itemize}
 	\end{block}
 	
@@ -217,20 +211,23 @@
 	
 		\frame{
 		\frametitle{DATA COLLECTION}
-		\Large
+		\LARGE
 		\begin{itemize}[label=$ \ast $]
-			\item Field survey 
-			\item OpenStreetMap
-			\item Crowd sourcing 
+			\uncover<2->{\item Field survey.}
+			\vspace{0.5cm}
+			\uncover<3->{\item OpenStreetMap.}
+			\vspace{0.5cm}
+			\uncover<4->{\item Crowdsourcing.}
 		\end{itemize}
 		}
 		
 	\frame{
 		\frametitle{FUNCTIONAL AND NON-FUNCTIONAL REQUIREMENTS}
-		\begin{block}{Figure 2: Class Diagram}
+		\begin{block}{}
 		\begin{figure}
 			\centering
-			\includegraphics[width=1\linewidth]{figures/classdiagram}
+			\includegraphics[width=0.8\linewidth]{figures/classdiagram}
+			\caption{Class Diagram}
 			\label{fig:classdiagram}
 		\end{figure}
 	\end{block}
@@ -239,10 +236,11 @@
 
 	\frame{
 	\frametitle{FUNCTIONAL AND NON-FUNCTIONAL REQUIREMENTS}
-	\begin{block}{Figure 3: Use Case Diagram}
+	\begin{block}{}
 		\begin{figure}
 			\centering
-			\includegraphics[width=1\linewidth]{figures/usecase}
+			\includegraphics[width=0.9\linewidth]{figures/usecase}
+			\caption{Use Case Diagram}
 			\label{fig:usecase}
 		\end{figure}
 	\end{block}
@@ -251,10 +249,11 @@
 
 	\frame{
 	\frametitle{FUNCTIONAL AND NON-FUNCTIONAL REQUIREMENTS}
-	\begin{block}{Figure 4: Activity Diagram}
+	\begin{block}{}
 		\begin{figure}
 			\centering
-			\includegraphics[width=0.5\linewidth]{figures/activitydiagram}
+			\includegraphics[width=0.4\linewidth]{figures/activitydiagram}
+			\caption{Activity Diagram}
 			\label{fig:activitydiagram}
 		\end{figure}
 	\end{block}
@@ -269,18 +268,53 @@
 %}
 %
 
+	\section{Tools Used}
+
+\frame{
+	\frametitle{TOOLS USED}
+	\large
+	%	\begin{block}{The tools used for this project are:}
+	\begin{itemize}[label=$ \star $]
+		\item Python.
+		\vspace{0.2cm}
+		\item Django.
+		\vspace{0.2cm}
+		\item Material Kit.
+		\vspace{0.2cm}
+		\item PostgreSQL.
+		\vspace{0.2cm}
+		\item QGIS.
+		\vspace{0.2cm}
+		\item Leaflet and OpenStreetMap.
+		\vspace{0.2cm}
+		\item Open Source Routing Machine (OSRM).
+		\vspace{0.2cm}
+		\item GPS receiver and Smartphone.
+	\end{itemize}
+	%	\end{block}
+}
+
+
 	\section{Results and Discussions}
 
 \frame{
 	\frametitle{RESULTS AND DISCUSSIONS}
+	\large
 	\begin{block}{The results and discussions:}
 		\begin{itemize}[label=$ \star $]
-			\item User gets routes based on destination and departure searched
-			\item A user can access all available operators and view detailed information on each station
-			\item User can compare fares visually
-			\item A user is able to access station location in external platform
-			\item Groups for managing staff privileges
-			\item Detailed history of changes available in administration dashboard
+			\item User gets routes based on destination and departure searched.
+			\vspace{0.1cm}
+			\item A user can access all available operators and view detailed information on each station.
+			\vspace{0.1cm}
+			\item User can compare fares visually.
+			\vspace{0.1cm}
+			\item A user is able to access station location in external platform.
+			\vspace{0.1cm}
+			\item Groups for managing staff privileges.
+			\vspace{0.1cm}
+			\item Detailed history of changes available in administration dashboard.
+			\vspace{0.1cm}
+			\item A geospatial database.
 		\end{itemize}	
 	\end{block}
 }
@@ -297,17 +331,20 @@
 
 \frame{
 	\frametitle{CONCLUSIONS AND RECOMMENDATIONS}
+	\large
 	\begin{block}{It can be concluded that this system:}
 		\begin{itemize}[label=$ \star $]
-			\item Will improve trip planning and easy access to information only available within terminals to traveler hence saving time 
-			\item Should be adopted by Ghana Tourism Authority to help tourists find their way around Ghana transport network
+			\item Will improve trip planning and easy access to information only available within terminals to travellers hence saving time.
+			\vspace{0.2cm}
+			\item Should be adopted by Ghana Tourism Authority to help tourists find their way around Ghana transport network.
 		\end{itemize}	
 	\end{block}
 \uncover<2->{
 	\begin{block}{I would recommend that:}
 	\begin{itemize}[label=$ \star $]
-		\item Users should be able to book seats from the platform and also support voice input for the visually impaired
-		\item The system could get users current location and find nearest possible departure stations for their routes
+		\item Users should be able to book seats from the platform and also support voice input for the visually impaired.
+		\vspace{0.2cm}
+		\item The system could get users current location and find nearest departure stations for their routes.
 	\end{itemize}	
 }
 \end{block}
