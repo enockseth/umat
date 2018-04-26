@@ -55,15 +55,30 @@ The advantages of the Spiral Model are as follows:
 \end{itemize}
 
 \section{Feasibility Studies and Analyses}
-This section conducts a feasibility study on the project, and analyses  the cost and risk involved.
+Feasibility studies are some preliminary studies undertaken to know whether the project is feasible or not, given a number of circumstances. These studies include; technical, time frame, availability of funds, legal and ethical issues, availability of funds and resources, operation and marketing.
+
+\section{Requirements Gathering}
+A number of questions were asked and answers determined from stakeholders and other interest groups during requirements gathering. Some these questions include:
+		\begin{itemize}		
+			\item Where is the system going to be used? (Ghana)
+			\item Who is going to use the system? (Traveler)
+			\item What data should be input into the system? (Text)
+			\item What Software Development Life Cycle (SDLC) model to be used? (Spiral)
+			\item What type of output information will the system give? (Text and map data)
+		\end{itemize}
 
 \subsection{Cost Analysis}
-Since this is a software only project we will not concern ourselves with price of hardware.  However, the price of the hardware is directly to the resources used, which were analysed in the feasibility study. Therefore it is concluded hat this system will be relatively inexpensive to run.
+Since this is a software only project we will not concern ourselves with price of hardware.  However, the price of the hardware is directly to the resources used, which were analysed in the feasibility study. Therefore it is concluded hat this system will depend on the size of data being added to the database and traffic to application.
 
 \subsection{Risk Analysis}
+The two main risks involved in this project are the security risks anyone hosting services on the internet will face, and the risk of invalid data or information added by staff or administrator to the database.\\
+
+The first risk is mitigated by limiting the surface area of the system exposed to attackers and by strengthening the components which have been exposed. In this system, the only such component is the search front-end. The search front-end only has read access to the database. Since the information stored therein is public, the only thing a malicious actor can do with this is cause a Denial-of-Service (DoS) attack. Appropriate steps will be taken to mitigate this.\\
+
+The second risk somewhat complex to identify in some cases. Data will pass through several stages of validation and clean up before being made available to the public in order to provide them with the right information.
 
 \subsection{Use Case Diagram}
-A Use Case diagram depicts how the users interact with the system. It describes which operations the system can perform and the users as shown in \textit{Figure } below.
+A Use Case diagram depicts how the users interact with the system. It describes which operations the system can perform and the users as shown in Figure \ref{fig:usecase} below.
 
 \begin{figure}[H]
 	\centering
@@ -76,7 +91,7 @@ A Use Case diagram depicts how the users interact with the system. It describes 
 \subsection{Activity Diagram}
 An activity diagram visually presents a series of actions or flow of control in a system similar to a flowchart or or data flow diagram 
 
-An activity refers to a particular operation of a system. The operations in this system are modeled in to the the activity diagram in \textit{figure } below.
+An activity refers to a particular operation of a system. The operations in this system are modeled in to the the activity diagram in Figure \ref{fig:activitydiagram} below.
 
 \begin{figure}[H]
 	\centering
