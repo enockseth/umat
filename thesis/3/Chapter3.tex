@@ -26,7 +26,7 @@ The spiral model cycles through four quadrants, each representing a particular d
 
 \begin{figure}[th!]
 	\centering
-	\includegraphics[width=1.0\textwidth]{spiral}
+	\includegraphics[width=0.7\textwidth]{spiral}
 	\caption[The Spiral Model of Software Development]{The Spiral Model of Software Development}
 	\label{fig:spiral}
 \end{figure}
@@ -63,43 +63,54 @@ Since this is a software only project we will not concern ourselves with price o
 \subsection{Risk Analysis}
 
 \subsection{Use Case Diagram}
-A Use Case diagram depicts how the users interact with the system. It decribes which operations the system can perform and the users as shown in \textit{Figure } below.
+A Use Case diagram depicts how the users interact with the system. It describes which operations the system can perform and the users as shown in \textit{Figure } below.
 
-\textit{Insert use case diagram}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\linewidth]{usecase}
+	\caption[Use Case Diangram]{Use Case Diangram}
+	\label{fig:usecase}
+\end{figure}
+
 
 \subsection{Activity Diagram}
 An activity diagram visually presents a series of actions or flow of control in a system similar to a flowchart or or data flow diagram 
 
 An activity refers to a particular operation of a system. The operations in this system are modeled in to the the activity diagram in \textit{figure } below.
 
-\textit{Insert activity diagram}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.5\linewidth]{activitydiagram}
+	\caption[Activity Diagram]{Activity Diagram}
+	\label{fig:activitydiagram}
+\end{figure}
+
 
 \section{Implementation}
-The application is set into operation at the implementation stage. This includes how data is taken by the system, what form of data is taken by the system, where the data is kept, how the data is processed and what form of information is outputted.The first step was to map out collected transport terminals detailed information; including but no limited to:
+The application is set into operation at the implementation stage. This includes how data is taken by the system, what form of data is taken by the system, where the data is kept, how the data is processed and what form of information is outputted. The first step was to collect and map out transport terminals detailed information in some parts of Ghana; including but no limited to:
 \begin{itemize}
 	\item Name
-	\item Location (Town name)
-	\item Location (Longitude and Latitude)
-	\item Contacts (Phone, Email, Website, Operator)
-	\item Operators (STC, GRPTU, VVIP, VIP)
+	\item Location (\textit{Town name})
+	\item Location (\textit{Longitude and Latitude})
+	\item Contacts (\textit{Phone, Email, Website, Operator})
+	\item Operators (\textit{STC, GRPTU, VVIP, VIP})
+	\item Destinations
+	\item Departure times
+	\item Vehicle types
 \end{itemize}
 
-in some parts of Ghana. The mapped data was uploaded to OpenStreetMap database. After the mapping of the lorry stations, the mapped data was downloaded and processed in QGIS before being imported into the projects PostgreSQL based database.
+The mapped data was uploaded to OpenStreetMap database. After the mapping of the lorry stations, the mapped data was extracted and processed in QGIS before being imported into the projects local PostgreSQL based database.
 
-\subsection{Mapping Transportation Terminals}
-The following steps were taken in the mapping out process:
-\begin{itemize}
-	\item Go to \textit{www.osm.org} in a modern web browser such as Firefox of Chromium; 
-	\item Searched for town or city where lorry station is to be mapped; and 
-	\item Area was edited by: 
-	\item Marking out specific areas (buildings, routes (roads, walkways) and the stations are either mapped as points or closed ways (polygons);  
-	\item Naming  and describing of point, areas or routes. 
-\end{itemize}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{3/figures/overpass}
+	\caption[Extracting mapped data from OpenStreetMap]{Extracting mapped data from OpenStreetMap}
+	\label{fig:overpass}
+\end{figure}
 
-\textit{Insert image of update / mapped terminals}
 
 \subsection{Data Collection}
-The following information were collected from the selected lorry stations. Some of these information was collected by survey and crowdsouring.
+Data was collected using smartphones and handheld GPS receivers. The following information were collected from the selected lorry stations. Some of these information was collected by survey and crowdsouring tickets. Some of the data recorded include:
 \begin{itemize}
 	\item Name;
 	\item Operator;
@@ -108,7 +119,40 @@ The following information were collected from the selected lorry stations. Some 
 	\item Available destinations.
 \end{itemize}
 
-\textit{Insert image of tickets / terminal schedule board}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.6\linewidth]{ticket}
+	\caption[Sample bus ticket]{Sample bus ticket}
+	\label{fig:ticket}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.6\linewidth]{schedules}
+	\caption[Information available within terminals]{Information available within terminals}
+	\label{fig:schedules}
+\end{figure}
+
+\subsection{Mapping Transportation Terminals}
+The following steps were taken in the mapping out process:
+\begin{itemize}
+	\item Go to \textit{https://www.osm.org} in a modern web browser such as Firefox of Chromium; 
+	\item Searched for town or city where lorry station is to be mapped; and 
+	\item Area was edited by using JOSM editor as shown in Figure \ref{fig:josm};
+	\item Marking out specific areas (buildings, routes (roads, walkways) and the stations are either mapped as points or closed ways (polygons);  
+	\item Naming  and describing of point, areas or routes. 
+\end{itemize}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\linewidth]{josm}
+	\caption[Mapping Bus Station into OpenStreetMap]{Mapping Bus Station into OpenStreetMap}
+	\label{fig:josm}
+\end{figure}
+
+\subsection{Rendering of maps and Routing}
+The map showing location various stations was rendered using Leaflet. Routing is from departure station is done on the web using the Open Source Routing Machine (OSMRM) Car and OpenStreetMap as a basemap. When the routes and stations locations are accessed from a smartphone with any map application such as OSMAnd, MAPS.ME, Google Maps, etc they will be prompted to choose and option or else it is opened in a web browser.
+
 
 % ---------------------------------------------------------------------------
 %: ----------------------- end of thesis sub-document ------------------------
