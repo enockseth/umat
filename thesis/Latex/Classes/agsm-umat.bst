@@ -180,7 +180,7 @@ FUNCTION {format.names}
 	{ namesleft #1 >
 	    { ", " * t * }
 	    { t "others" =
-		{ " et~al." * }
+		{ " \textit{et~al}." * }
 		{ " \harvardand\ " * t * }
 	      if$
 	    }
@@ -536,9 +536,9 @@ FUNCTION {format.lab.names.abbr}
   s num.names$ 'numnames :=
   numnames #1 >
     { numnames #2 >
-	{ s #1 "{vv~}{ll}" format.name$ " et~al." * }
+	{ s #1 "{vv~}{ll}" format.name$ " \textit{et~al}." * }
 	{ s #2 "{ff }{vv }{ll}{ jj}" format.name$ "others" =
-            { s #1 "{vv~}{ll}" format.name$ " et~al." * }
+            { s #1 "{vv~}{ll}" format.name$ " \textit{et~al}." * }
 	    { s #1 "{vv~}{ll}" format.name$ " \harvardand\ " *
               s #2 "{vv~}{ll}" format.name$ * 
             }
@@ -561,7 +561,7 @@ FUNCTION {format.lab.names.full}
 	{ namesleft #1 >
 	    { ", " * t * }
 	    { t "others" =
-		{ " et~al." * }
+		{ " \textit{et~al}." * }
 		{ " \harvardand\ " * t * }
 	      if$
 	    }
@@ -1076,7 +1076,7 @@ FUNCTION {sortify}
 
 FUNCTION {sortify.names}
 { " \harvardand\ " " " replace.substring
-  " et~al." " zzz" replace.substring
+  " \textit{et~al}." " zzz" replace.substring
   sortify
 }
 
