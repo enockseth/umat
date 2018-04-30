@@ -303,9 +303,9 @@ AWARD OF THE DEGREE OF BACHELOR OF SCIENCE IN COMPUTER SCIENCE AND ENGINEERING
 PROJECT SUPERVISOR
 \vspace{1.0cm}
 
-...................................
+.....................................................
 
-DR. HAMIDU ABDEL FATAO
+DR HAMIDU ABDEL-FATAO
 
 \vspace{1.0cm}
 
@@ -328,7 +328,7 @@ MAY 2018
 
 \newenvironment{dedication}
 {\begin{alwayssingle}
-  \pagestyle{empty}
+\pagestyle{plain}
   \begin{center}
   \vspace*{1.0cm}
 %  {\Large \bfseries DEDICATION}
@@ -346,7 +346,7 @@ MAY 2018
 % on its own page.
 
 \newenvironment{acknowledgements}
-{\pagestyle{empty}
+{\pagestyle{plain}
 \begin{alwayssingle}
 \begin{center}
 \vspace*{1.0cm}
@@ -361,7 +361,7 @@ MAY 2018
 % does not appears in a quote environment so you can get more in.
 
 \newenvironment{acknowledgementslong}
-{\pagestyle{empty}
+{\pagestyle{plain}
 \begin{alwayssingle}
 \begin{center}
 \vspace*{1.0cm}
@@ -377,7 +377,7 @@ MAY 2018
 %the top of the page. The abstract itself appears in a quote environment,
 %i.e. tabbed in at both sides, and on its own page.
 
-\newenvironment{abstracts} {\begin{alwayssingle} \pagestyle{empty}
+\newenvironment{abstracts} {\begin{alwayssingle} \pagestyle{plain}
   \begin{center}
   \vspace*{1.0cm}
   {\Large \bfseries  ABSTRACT}
@@ -420,7 +420,7 @@ MAY 2018
 
 %Statement of originality if required
 
-\newenvironment{declaration} {\begin{alwayssingle} \pagestyle{empty}
+\newenvironment{declaration} {\begin{alwayssingle} \pagestyle{plain}
   \begin{center}
   \vspace*{1.0cm}
   {\Large \bfseries  DECLARATION}

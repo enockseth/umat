@@ -129,7 +129,7 @@
 
 %\renewcommand{\submittedtext}{change the default text here if needed}
 \degree{BACHELOR OF SCIENCE}
-\degreedate{MAY, 2018}
+\degreedate{MAY 2018}
 
 
 % ----------------------------------------------------------------------
@@ -167,7 +167,6 @@
 % This cover back side is required by Dresden Med Fac; uncomment if needed.
 
 \frontmatter
-
 %: ----------------------- abstract ------------------------
 
 % Your institution may have specific regulations if you need an abstract and where it is to be placed in the document. The default here is just after title.
@@ -196,7 +195,7 @@
 
 
 %: ----------------------- list of figures/tables ------------------------
-\renewcommand\listfigurename{LIST OF FIGURES}
+\renewcommand\listfigurename{\textbf{LIST OF FIGURES}}
 \listoffigures	% print list of figures
 
 %\listoftables  % print list of tables
@@ -258,7 +257,7 @@
 %\begin{tiny} % tiny(5) < scriptsize(7) < footnotesize(8) < small (9)
 
 \bibliographystyle{Latex/Classes/agsm-umat} % Title is link if provided
-\renewcommand{\bibname}{REFERENCES} % changes the header; default: Bibliography
+\renewcommand{\bibname}{\textbf{REFERENCES}} % changes the header; default: Bibliography
 
 \bibliography{9_backmatter/references} % adjust this to fit your BibTex file
 
@@ -290,10 +289,8 @@
 
 %: Declaration of originality
 \appendix
-\renewcommand\chaptername{Appendix}
+\addtocontents{toc}{\protect\renewcommand\protect\chaptername{Appendix}}
+%\renewcommand\chaptername{Appendix}
 \chapter{A SAMPLE CODE FOR MODELS } 
 \lstinputlisting[language=Python]{/home/kakarot/terminalfinder/terminal/models.py}
-
-
-
 \end{document}
