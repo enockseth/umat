@@ -2,7 +2,7 @@
 % content in this file will be fed into the main document
 
 %: ----------------------- name of chapter  -------------------------
-\chapter{Software Design and Analysis} % top level followed by section, subsection
+\chapter{SOFTWARE DESIGN AND ANALYSIS} % top level followed by section, subsection
 
 
 %: ----------------------- paths to graphics ------------------------
@@ -20,30 +20,30 @@ In this chapter, the software (Public Transportation Search Web Portal) developm
 
 \section{Software Development Process Model}
 A software development process model is simply the process by which an organization 
-develops software. (Zeil, 2016). It is broken down into several phases, there are different criteria for each phase \citep{marciniak1994encyclopedia}. The software development model chosen here is the spiral model. This model was chosen due to the exploratory nature of the project.
+develops software \citep{mayo_software_2016}. It is broken down into several phases, and there are different criteria for each phase \citep{marciniak1994encyclopedia}. The software development model chosen here is the spiral model. This model was chosen due to the exploratory nature of the project.
 
 The spiral model cycles through four quadrants, each representing a particular development phase \cite{boehm_spiral_1988}. The cycle is shown in Figure 3.1.
 
 \begin{figure}[th!]
 	\centering
 	\includegraphics[width=0.7\textwidth]{spiral}
-	\caption[The Spiral Model of Software Development]{The Spiral Model of Software Development}
+	\caption[The Spiral Model of Software Development]{The Spiral Model of Software Development \citep{boehm_spiral_1988}}
 	\label{fig:spiral}
 \end{figure}
 
 \subsection{Phases of the Spiral Model}
-The phases of the spiral model includes:
+The phases of the spiral model include the following:
 
-\subsubsection{Determine Objectives, Alternatives and Constraints}
+\paragraph{Determine Objectives, Alternatives and Constraints}
 During this phase the objectives for the iteration, and it's alternatives and constraints are investigated.
 
-\subsubsection{Evaluate Alternatives, Identify and Resolve Risks}
+\paragraph{Evaluate Alternatives, Identify and Resolve Risks}
 The risks involved in the iteration of development are examined, and solutions are found. Additionally, this phase also evaluates the alternatives to the chosen strategy.
 
-\subsubsection{Develop and Verify the Next Level Product}
+\paragraph{Develop and Verify the Next Level Product}
 The development of the product takes place in this phase. For each cycle a different methodology may be used during this phase. For instance, the waterfall model can be used for 
 
-\subsubsection{Plan Next Iteration}
+\paragraph{Plan Next Iteration}
 During this phase, with all the information gained from the past cycles, the next iteration is planned.
 
 \subsection{Advantages of the Spiral Model}
@@ -92,7 +92,6 @@ A Use Case diagram depicts how the users interact with the system. It describes 
 An activity diagram visually presents a series of actions or flow of control in a system similar to a flowchart or or data flow diagram 
 
 An activity refers to a particular operation of a system. The operations in this system are modeled in to the the activity diagram in Figure \ref{fig:activitydiagram} below.
-
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.5\linewidth]{activitydiagram}
@@ -100,9 +99,8 @@ An activity refers to a particular operation of a system. The operations in this
 	\label{fig:activitydiagram}
 \end{figure}
 
-
 \section{Implementation}
-The application is set into operation at the implementation stage. This includes how data is taken by the system, what form of data is taken by the system, where the data is kept, how the data is processed and what form of information is outputted. The first step was to collect and map out transport terminals detailed information in some parts of Ghana; including but no limited to:
+The application is set into operation at the implementation stage. This includes how data is taken by the system, what form of data is taken by the system, where the data is kept, how the data is processed and what form of information is outputted. The first step was to collect and map out transport terminals detailed information in some parts of Ghana; including but not limited to:
 \begin{itemize}
 	\item Name
 	\item Location (\textit{Town name})
@@ -118,14 +116,14 @@ The mapped data was uploaded to OpenStreetMap database. After the mapping of the
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.7\linewidth]{3/figures/overpass}
+	\includegraphics[width=0.9\linewidth]{3/figures/overpass}
 	\caption[Extracting mapped data from OpenStreetMap]{Extracting mapped data from OpenStreetMap}
 	\label{fig:overpass}
 \end{figure}
 
 
 \subsection{Data Collection}
-Data was collected using smartphones and handheld GPS receivers. The following information were collected from the selected lorry stations. Some of these information was collected by survey and crowdsouring tickets. Some of the data recorded include:
+Data was collected using smartphones and handheld GPS receivers. The following information were collected from the selected lorry stations. Some of these information were collected by survey and crowdsourcing tickets. Some of the data recorded include:
 \begin{itemize}
 	\item Name;
 	\item Operator;
@@ -155,18 +153,18 @@ The following steps were taken in the mapping out process:
 	\item Searched for town or city where lorry station is to be mapped; and 
 	\item Area was edited by using JOSM editor as shown in Figure \ref{fig:josm};
 	\item Marking out specific areas (buildings, routes (roads, walkways) and the stations are either mapped as points or closed ways (polygons);  
-	\item Naming  and describing of point, areas or routes. 
+	\item Naming  and describing of points, areas or routes. 
 \end{itemize}
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.8\linewidth]{josm}
+	\includegraphics[width=\linewidth]{josm}
 	\caption[Mapping Bus Station into OpenStreetMap]{Mapping Bus Station into OpenStreetMap}
 	\label{fig:josm}
 \end{figure}
 
 \subsection{Rendering of maps and Routing}
-The map showing location various stations was rendered using Leaflet. Routing is from departure station is done on the web using the Open Source Routing Machine (OSMRM) Car and OpenStreetMap as a basemap. When the routes and stations locations are accessed from a smartphone with any map application such as OSMAnd, MAPS.ME, Google Maps, etc they will be prompted to choose and option or else it is opened in a web browser.
+The map showing location various stations was rendered using Leaflet. Routing from departure station is done on the web using the Open Source Routing Machine (OSMRM) Car and OpenStreetMap as a basemap. When the routes and stations locations are accessed from a smartphone with any map based application such as OSMAnd, MAPS.ME, Google Maps, etc they will be prompted to choose an option or else it is opened in a web browser.
 
 
 % ---------------------------------------------------------------------------

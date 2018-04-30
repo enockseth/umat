@@ -168,16 +168,16 @@
 
 %: Uncomment this secion for two-sided printing
 % ------------------------------
-\setlength{\oddsidemargin}{1.5cm}
-\setlength{\evensidemargin}{0cm}
-\setlength{\topmargin}{1mm}
-\setlength{\headheight}{1.36cm}
-\setlength{\headsep}{1.00cm}
-\setlength{\textheight}{20.84cm}
-\setlength{\textwidth}{14.5cm}
-\setlength{\marginparsep}{1mm}
-\setlength{\marginparwidth}{3cm}
-\setlength{\footskip}{2.36cm}
+%\setlength{\oddsidemargin}{1.5cm}
+%\setlength{\evensidemargin}{0cm}
+%\setlength{\topmargin}{1mm}
+%\setlength{\headheight}{1.36cm}
+%\setlength{\headsep}{1.00cm}
+%\setlength{\textheight}{20.84cm}
+%\setlength{\textwidth}{14.5cm}
+%\setlength{\marginparsep}{1mm}
+%\setlength{\marginparwidth}{3cm}
+%\setlength{\footskip}{2.36cm}
 
 
 %: Uncomment this secion for one-sided printing
@@ -213,6 +213,20 @@
 }
 
 
+\def\@makechapterhead#1{%
+    \vspace*{-27\p@}%FOR LESS VERTICAL SPACE YOU CAN MAKE IT UNTIL -127
+    {\parindent \z@ \raggedright \normalfont
+        \ifnum \c@secnumdepth >\m@ne
+        \centering
+        \Large\bfseries \MakeUppercase\@chapapp\space \MakeUppercase\thechapter
+        \par\nobreak
+       \vskip 5\p@
+        \fi
+        \interlinepenalty\@M
+        \centering
+        \Large \bfseries #1\par\nobreak
+        \vskip 15\p@
+    }}
 
 
 
@@ -260,25 +274,44 @@
     \thispagestyle{empty}
 %  \null\vfill
   \begin{center}
-    { \Huge {\bfseries {\@title}} \par}
-{\large \vspace*{35mm} {{\@crest} \par} \vspace*{25mm}}
-    {{\Large \@author} \par}
-%	\vspace*{1ex}
-%	{{\@cityofbirth} \par}    
-{\large 
-	\vspace*{1ex}
-    {{\@collegeordept} \par}
-	\vspace*{1ex}
-    {{\submittedtextq} \par}
-	\vspace*{1ex}
-    {{\@university} \par}
-	\vspace*{25mm}
-    {{\submittedtext} \par}
-	\vspace*{1ex}
-    {\it {\@degree} \par}
-	\vspace*{2ex}
-    {\@degreedate}
-}%end large
+	\vspace{-3.0cm}
+	{\@university}
+
+TARKWA 
+\vspace{1.0cm}
+
+FACULTY OF ENGINEERING 
+
+{\@collegeordept}
+\vspace{1.5cm}
+
+A PROJECT REPORT ENTITLED 
+
+{\@title}
+
+\vspace{1.0cm}
+
+BY
+
+{\@author}
+\vspace{1.5cm}
+
+SUBMITTED IN PARTIAL FULFILLMENT OF THE REQUIREMENT FOR THE
+AWARD OF THE DEGREE OF BACHELOR OF SCIENCE IN COMPUTER SCIENCE AND ENGINEERING 
+
+\vspace{1.5cm}
+PROJECT SUPERVISOR
+\vspace{1.0cm}
+
+...................................
+
+DR. HAMIDU ABDEL FATAO
+
+\vspace{1.0cm}
+
+TARKWA, GHANA
+
+MAY 2018
   \end{center}
   \null\vfill
 \end{alwayssingle}}
@@ -297,12 +330,12 @@
 {\begin{alwayssingle}
   \pagestyle{empty}
   \begin{center}
-  \vspace*{1.5cm}
-  {\LARGE }
+  \vspace*{1.0cm}
+%  {\Large \bfseries DEDICATION}
   \end{center}
   \vspace{0.5cm}
-  \begin{quote} \begin{center}}
-{\end{center} \end{quote} \end{alwayssingle}}
+  \begin{quote}}
+{\end{quote} \end{alwayssingle}}
 
 
 % ACKNOWLEDGEMENTS
@@ -316,10 +349,10 @@
 {\pagestyle{empty}
 \begin{alwayssingle}
 \begin{center}
-\vspace*{1.5cm}
-{\Large \bfseries Acknowledgements}
+\vspace*{1.0cm}
+{\Large \bfseries ACKNOWLEDGEMENTS}
 \end{center}
-\vspace{0.5cm}
+%\vspace{0.5cm}
 \begin{quote}}
 {\end{quote}\end{alwayssingle}}
 
@@ -331,10 +364,11 @@
 {\pagestyle{empty}
 \begin{alwayssingle}
 \begin{center}
-\vspace*{1.5cm}
+\vspace*{1.0cm}
 {\Large \bfseries Acknowledgements}
 \end{center}
-\vspace{0.5cm}\begin{quote}}
+%\vspace{0.5cm}
+\begin{quote}}
 {\end{quote}\end{alwayssingle}}
 
 %ABSTRACT
@@ -345,10 +379,10 @@
 
 \newenvironment{abstracts} {\begin{alwayssingle} \pagestyle{empty}
   \begin{center}
-  \vspace*{1.5cm}
-  {\Large \bfseries  Abstract}
+  \vspace*{1.0cm}
+  {\Large \bfseries  ABSTRACT}
   \end{center}
-  \vspace{0.5cm}
+  %\vspace{0.5cm}
    \begin{quote}}
 {\end{quote}\end{alwayssingle}}
 
@@ -361,7 +395,8 @@
   \vspace*{1.5cm}
   {\Large \bfseries  Abstract}
   \end{center}
-  \vspace{0.5cm} \begin{quote}}
+  %\vspace{0.5cm} 
+  \begin{quote}}
 {\end{quote}\end{alwayssingle}}
 
 %The abstractseparate environment is for running of a page with the abstract
@@ -387,14 +422,17 @@
 
 \newenvironment{declaration} {\begin{alwayssingle} \pagestyle{empty}
   \begin{center}
-  \vspace*{1.5cm}
-  {\Large \bfseries  Declaration}
+  \vspace*{1.0cm}
+  {\Large \bfseries  DECLARATION}
   \end{center}
-  \vspace{0.5cm}
+  %\vspace{0.5cm}
    \begin{quote}}
 {\end{quote}\end{alwayssingle}}
 
+\newenvironment{cover} {\begin{alwayssingle} \pagestyle{empty}
+\end{alwayssingle}}
 
+%
 %:-------------------------- page numbers: roman+arabic -----------------------
 
 % ROMANPAGES
