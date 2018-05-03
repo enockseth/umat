@@ -39,11 +39,6 @@
 \titlespacing\subsubsection{0pt}{12pt plus 4pt minus 2pt}{0pt plus 2pt minus 2pt}
 
 \makeatletter
-\patchcmd{\@chapter}{\protect {CHAPTER }}{\ifappendix{APPENDIX }\else{CHAPTER }\fi}{}{}
-\makeatother
-\AtBeginEnvironment{appendices}{\appendixtrue}
-
-\makeatletter
 \setlength{\@fptop}{0pt}
 \makeatother
 
@@ -73,8 +68,8 @@
 	top=2.54cm, % Top margin
 	bottom=2.54cm, % Bottom margin
 	right=2.54cm, % Right margin
-	left=3.02cm % Left margin, to allow space for binding UMaT, Tarkwa
-	%showframe, % Uncomment to show how the type block is set on the page
+	left=3.02cm, % Left margin, to allow space for binding UMaT, Tarkwa
+%	showframe, % Uncomment to show how the type block is set on the page
 }
 
 %: ----------------------------------------------------------------------
@@ -87,11 +82,11 @@
     \pdfinfo { /Title  (PhD and MPhil Thesis Classes)
                /Creator (TeX)
                /Producer (pdfTeX)
-               /Author (YourName your@email.net)
-               /CreationDate (D:YYYYMMDDhhmmss)  %format D:YYYYMMDDhhmmss
+               /Author (Enock Seth Nyamador enockseth@gmail.com)
+               /CreationDate (\today)  %format D:YYYYMMDDhhmmss
                /ModDate (D:YYYYMMDDhhmm)
                /Subject (xyz)
-               /Keywords (add, your, keywords, here) }
+               /Keywords (transport, ghana, station) }
     \pdfcatalog { /PageMode (/UseOutlines)
                   /OpenAction (fitbh)  }
 \fi
@@ -165,7 +160,6 @@
 %: ----------------------- cover page back side ------------------------
 % Your research institution may require reviewer names, etc.
 % This cover back side is required by Dresden Med Fac; uncomment if needed.
-
 \frontmatter
 %: ----------------------- abstract ------------------------
 
@@ -189,14 +183,19 @@
 
 \setcounter{secnumdepth}{3} % organisational level that receives a numbers
 \setcounter{tocdepth}{3}    % print table of contents for level 3
-\renewcommand\contentsname{TABLE OF CONTENTS}
+
+\renewcommand{\contentsname}{\hfill\bfseries\Large TABLE OF CONTENTS \hfill}
+\addcontentsline{toc}{chapter}{\textbf{TABLE OF CONTENTS}}   
+\renewcommand{\cftaftertoctitle}{\hfill}
 \tableofcontents            % print the table of contents
 % levels are: 0 - chapter, 1 - section, 2 - subsection, 3 - subsection
-
-
 %: ----------------------- list of figures/tables ------------------------
-\renewcommand\listfigurename{\textbf{LIST OF FIGURES}}
-\listoffigures	% print list of figures
+\renewcommand{\listfigurename}{\textbf{LIST OF FIGURES}}
+%\renewcommand{\listfigurename}{\hfill\bfseries\Large LIST OF FIGURES}   
+%\renewcommand{\cftafterloftitle}{\hfill}
+	\addtocontents{lof}{\textbf{Figure}\hfill\textbf{Title}\hfill\textbf{Page}\par}
+	\listoffigures	% print list of figures
+
 
 %\listoftables  % print list of tables
 

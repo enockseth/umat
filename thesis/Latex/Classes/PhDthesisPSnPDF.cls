@@ -330,7 +330,7 @@ MAY 2018
 {\begin{alwayssingle}
 \pagestyle{plain}
   \begin{center}
-  \vspace*{1.0cm}
+%  \vspace*{1.0cm}
 %  {\Large \bfseries DEDICATION}
   \end{center}
   \vspace{0.5cm}
@@ -349,7 +349,7 @@ MAY 2018
 {\pagestyle{plain}
 \begin{alwayssingle}
 \begin{center}
-\vspace*{1.0cm}
+%\vspace*{1.0cm}
 {\Large \bfseries ACKNOWLEDGEMENTS}
 \end{center}
 %\vspace{0.5cm}
@@ -364,7 +364,7 @@ MAY 2018
 {\pagestyle{plain}
 \begin{alwayssingle}
 \begin{center}
-\vspace*{1.0cm}
+%\vspace*{1.0cm}
 {\Large \bfseries Acknowledgements}
 \end{center}
 %\vspace{0.5cm}
@@ -379,7 +379,7 @@ MAY 2018
 
 \newenvironment{abstracts} {\begin{alwayssingle} \pagestyle{plain}
   \begin{center}
-  \vspace*{1.0cm}
+%  \vspace*{1.0cm}
   {\Large \bfseries  ABSTRACT}
   \end{center}
   %\vspace{0.5cm}
@@ -422,7 +422,7 @@ MAY 2018
 
 \newenvironment{declaration} {\begin{alwayssingle} \pagestyle{plain}
   \begin{center}
-  \vspace*{1.0cm}
+%  \vspace*{1.0cm}
   {\Large \bfseries  DECLARATION}
   \end{center}
   %\vspace{0.5cm}
