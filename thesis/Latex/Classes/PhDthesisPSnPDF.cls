@@ -214,7 +214,7 @@
 
 
 \def\@makechapterhead#1{%
-    \vspace*{-27\p@}%FOR LESS VERTICAL SPACE YOU CAN MAKE IT UNTIL -127
+%    \vspace*{-41\p@}%FOR LESS VERTICAL SPACE YOU CAN MAKE IT UNTIL -127
     {\parindent \z@ \raggedright \normalfont
         \ifnum \c@secnumdepth >\m@ne
         \centering
@@ -227,8 +227,6 @@
         \Large \bfseries #1\par\nobreak
         \vskip 15\p@
     }}
-
-
 
 %:-------------------------- title page layout -----------------------
 
