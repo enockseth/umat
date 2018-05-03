@@ -14,7 +14,6 @@
 % In this template package, it can be found in ./Latex/Classes/
 \documentclass[oneside,12pt]{Latex/Classes/PhDthesisPSnPDF}
 \usepackage{acro}
-
 %: Macro file for Latex
 % Macros help you summarise frequently repeated Latex commands.
 % Here, they are placed in an external file /Latex/Macros/MacroFile1.tex
@@ -33,10 +32,18 @@
 \usepackage[titles]{tocloft} % remove dots from TOC
 \renewcommand{\cftdot}{}
 \usepackage{titlesec}
+\usepackage[font=bf]{caption}
 
 \titlespacing\section{0pt}{12pt plus 4pt minus 2pt}{0pt plus 2pt minus 2pt}
 \titlespacing\subsection{0pt}{12pt plus 4pt minus 2pt}{0pt plus 2pt minus 2pt}
 \titlespacing\subsubsection{0pt}{12pt plus 4pt minus 2pt}{0pt plus 2pt minus 2pt}
+
+\titleformat*{\section}{\normalfont\fontsize{12}{19}\bfseries}
+\titleformat*{\subsection}{\normalfont\fontsize{12}{17}}
+\titleformat*{\subsubsection}{\normalfont\fontsize{12}{17}}
+
+\setlength{\cftbeforetoctitleskip}{0pt}
+\setlength{\cftaftertoctitleskip}{0pt}
 
 \makeatletter
 \setlength{\@fptop}{0pt}
@@ -45,7 +52,7 @@
 \usepackage{titletoc}% http://ctan.org/pkg/titletoc % Appends CHAPTER 3 in TOC Chater names, UMaT standard
 \titlecontents{chapter}% <section-type>
 [0pt]% <left>
-{}% <above-code>
+{\bfseries}% <above-code>
 {\MakeUppercase{\bfseries\chaptername}\ \bfseries\thecontentslabel\quad}% <numbered-entry-format>
 {}% <numberless-entry-format>
 {\bfseries\hfill\contentspage}% <filler-page-format>
@@ -79,11 +86,11 @@
 
 %if output to PDF then put the following in PDF header
 \ifpdf  
-    \pdfinfo { /Title  (PhD and MPhil Thesis Classes)
+    \pdfinfo { /Title  (Development of an Efficient Public Transport Search Portal for Ghana)
                /Creator (TeX)
                /Producer (pdfTeX)
                /Author (Enock Seth Nyamador enockseth@gmail.com)
-               /CreationDate (\today)  %format D:YYYYMMDDhhmmss
+               /CreationDate (D:YYYYMMDDhhmmss)  %format D:YYYYMMDDhhmmss
                /ModDate (D:YYYYMMDDhhmm)
                /Subject (xyz)
                /Keywords (transport, ghana, station) }
@@ -146,7 +153,7 @@
 %\language{english}
 
 % sets line spacing
-\renewcommand\baselinestretch{1.5}
+\renewcommand\baselinestretch{1.2}
 \baselineskip=18pt plus1pt
 
 
@@ -180,22 +187,27 @@
 \include{0_frontmatter/acknowledgement}
 
 %: ----------------------- contents ------------------------
-
+\begingroup
 \setcounter{secnumdepth}{3} % organisational level that receives a numbers
 \setcounter{tocdepth}{3}    % print table of contents for level 3
-
 \renewcommand{\contentsname}{\hfill\bfseries\Large TABLE OF CONTENTS \hfill}
-\addcontentsline{toc}{chapter}{\textbf{TABLE OF CONTENTS}}   
-\renewcommand{\cftaftertoctitle}{\hfill}
+\addcontentsline{toc}{chapter}{TABLE OF CONTENTS}
+\renewcommand{\vspace}[2]{}
 \tableofcontents            % print the table of contents
 % levels are: 0 - chapter, 1 - section, 2 - subsection, 3 - subsection
-%: ----------------------- list of figures/tables ------------------------
-\renewcommand{\listfigurename}{\textbf{LIST OF FIGURES}}
-%\renewcommand{\listfigurename}{\hfill\bfseries\Large LIST OF FIGURES}   
-%\renewcommand{\cftafterloftitle}{\hfill}
-	\addtocontents{lof}{\textbf{Figure}\hfill\textbf{Title}\hfill\textbf{Page}\par}
-	\listoffigures	% print list of figures
+\endgroup
 
+%: ----------------------- list of figures/tables ------------------------
+\begingroup
+%\renewcommand{\listfigurename}{\bfseries LIST OF FIGURES}
+\renewcommand\listfigurename{\centerline{\bfseries\Large LIST OF FIGURES}\global\def\listfigurename{LIST OF FIGURES}}
+%\renewcommand{\listfigurename}{\hfill\bfseries\Large LIST OF FIGURES \hfil}   
+%\renewcommand{\cftafterloftitle}{\hfill}
+\addtocontents{lof}{\textbf{Figure}\hfill\textbf{Title}\hfill\textbf{Page}\par}
+\renewcommand{\vspace}[2]{}
+\renewcommand{\addvspace}[1]{}
+\listoffigures	% print list of figures
+\endgroup
 
 %\listoftables  % print list of tables
 
@@ -246,7 +258,7 @@
 
 
 %: ----------------------- bibliography ------------------------
-
+\begingroup
 % The section below defines how references are listed and formatted
 % The default below is 2 columns, small font, complete author names.
 % Entries are also linked back to the page number in the text and to external URL if provided in the BibTex file.
@@ -256,13 +268,14 @@
 %\begin{tiny} % tiny(5) < scriptsize(7) < footnotesize(8) < small (9)
 
 \bibliographystyle{Latex/Classes/agsm-umat} % Title is link if provided
-\renewcommand{\bibname}{\textbf{REFERENCES}} % changes the header; default: Bibliography
-
+%\renewcommand{\bibname}{\centerline{\textbf{REFERENCES}}} % changes the header; default: Bibliography
+\renewcommand\bibname{\centerline{\bfseries\Large REFERENCES}\global\def\bibname{REFERENCES}}
+\renewcommand{\vspace}[2]{}
 \bibliography{9_backmatter/references} % adjust this to fit your BibTex file
 
 %\end{tiny}
 %\end{multicols}
-
+\endgroup
 % --------------------------------------------------------------
 % Various bibliography styles exit. Replace above style as desired.
 
