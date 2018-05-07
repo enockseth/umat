@@ -42,7 +42,7 @@
 \usepackage{amssymb}
 \usepackage{graphics} % for improved inclusion of graphics
 %\usepackage{wrapfig} % to include figure with text wrapping around it
-\usepackage[margin=10pt,font=small,labelfont=bf]{caption} % for improved layout of figure captions with extra margin, smaller font than text
+\usepackage[margin=12pt,font=small,labelfont=bf, font=bf]{caption} % for improved layout of figure captions with extra margin, smaller font than text
 \usepackage{fancyhdr} % for better header layout
 \usepackage{eucal}
 \usepackage[english]{babel}
@@ -218,13 +218,13 @@
     {\parindent \z@ \raggedright \normalfont
         \ifnum \c@secnumdepth >\m@ne
         \centering
-        \Large\bfseries \MakeUppercase\@chapapp\space \MakeUppercase\thechapter
+        \large\bfseries \MakeUppercase\@chapapp\space \MakeUppercase\thechapter
         \par\nobreak
        \vskip 5\p@
         \fi
         \interlinepenalty\@M
         \centering
-        \Large \bfseries #1\par\nobreak
+        \large \bfseries #1\par\nobreak
         \vskip 15\p@
     }}
 
@@ -329,7 +329,7 @@ MAY 2018
 \pagestyle{plain}
   \begin{center}
 %  \vspace*{1.0cm}
-%  {\Large \bfseries DEDICATION}
+%  {\large \bfseries DEDICATION}
   \end{center}
   \vspace{0.5cm}
   \begin{quote}}
@@ -338,7 +338,7 @@ MAY 2018
 
 % ACKNOWLEDGEMENTS
 %
-% The acknowledgements environment puts a large, bold, centered 
+% The acknowledgements environment puts a \large, bold, centered 
 % "Acknowledgements" label at the top of the page. The acknowledgements
 % themselves appear in a quote environment, i.e. tabbed in at both sides, and
 % on its own page.
@@ -348,13 +348,13 @@ MAY 2018
 \begin{alwayssingle}
 \begin{center}
 %\vspace*{1.0cm}
-{\Large \bfseries ACKNOWLEDGEMENTS}
+{\large \bfseries ACKNOWLEDGEMENTS}
 \end{center}
 %\vspace{0.5cm}
 \begin{quote}}
 {\end{quote}\end{alwayssingle}}
 
-% The acknowledgementslong environment puts a large, bold, centered 
+% The acknowledgementslong environment puts a \large, bold, centered 
 % "Acknowledgements" label at the top of the page. The acknowledgement itself 
 % does not appears in a quote environment so you can get more in.
 
@@ -363,7 +363,7 @@ MAY 2018
 \begin{alwayssingle}
 \begin{center}
 %\vspace*{1.0cm}
-{\Large \bfseries Acknowledgements}
+{\large \bfseries Acknowledgements}
 \end{center}
 %\vspace{0.5cm}
 \begin{quote}}
@@ -371,27 +371,27 @@ MAY 2018
 
 %ABSTRACT
 %
-%The abstract environment puts a large, bold, centered "Abstract" label at
+%The abstract environment puts a \large, bold, centered "Abstract" label at
 %the top of the page. The abstract itself appears in a quote environment,
 %i.e. tabbed in at both sides, and on its own page.
 
 \newenvironment{abstracts} {\begin{alwayssingle} \pagestyle{plain}
   \begin{center}
 %  \vspace*{1.0cm}
-  {\Large \bfseries  ABSTRACT}
+  {\large \bfseries  ABSTRACT}
   \end{center}
   %\vspace{0.5cm}
    \begin{quote}}
 {\end{quote}\end{alwayssingle}}
 
-%The abstractlong environment puts a large, bold, centered "Abstract" label at
+%The abstractlong environment puts a \large, bold, centered "Abstract" label at
 %the top of the page. The abstract itself does not appears in a quote
 %environment so you can get more in.
 
 \newenvironment{abstractslong} {\begin{alwayssingle} \pagestyle{empty}
   \begin{center}
   \vspace*{1.5cm}
-  {\Large \bfseries  Abstract}
+  {\large \bfseries  Abstract}
   \end{center}
   %\vspace{0.5cm} 
   \begin{quote}}
@@ -403,7 +403,7 @@ MAY 2018
 \newenvironment{abstractseparate} {\begin{alwayssingle} \pagestyle{empty}
   \vspace*{-1in}
  \begin{center}
-    { \Large {\bfseries {\@title}} \par}
+    { \large {\bfseries {\@title}} \par}
     {{\large \vspace*{1ex} \@author} \par}
 {\large \vspace*{1ex}
     {{\@collegeordept} \par}
@@ -421,7 +421,7 @@ MAY 2018
 \newenvironment{declaration} {\begin{alwayssingle} \pagestyle{plain}
   \begin{center}
 %  \vspace*{1.0cm}
-  {\Large \bfseries  DECLARATION}
+  {\large \bfseries  DECLARATION}
   \end{center}
   %\vspace{0.5cm}
    \begin{quote}}

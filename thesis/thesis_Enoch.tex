@@ -32,7 +32,6 @@
 \usepackage[titles]{tocloft} % remove dots from TOC
 \renewcommand{\cftdot}{}
 \usepackage{titlesec}
-\usepackage[font=bf]{caption}
 
 \titlespacing\section{0pt}{12pt plus 4pt minus 2pt}{0pt plus 2pt minus 2pt}
 \titlespacing\subsection{0pt}{12pt plus 4pt minus 2pt}{0pt plus 2pt minus 2pt}
@@ -190,7 +189,7 @@
 \begingroup
 \setcounter{secnumdepth}{3} % organisational level that receives a numbers
 \setcounter{tocdepth}{3}    % print table of contents for level 3
-\renewcommand{\contentsname}{\hfill\bfseries\Large TABLE OF CONTENTS \hfill}
+\renewcommand{\contentsname}{\hfill\bfseries\large TABLE OF CONTENTS \hfill}
 \addcontentsline{toc}{chapter}{TABLE OF CONTENTS}
 \renewcommand{\vspace}[2]{}
 \tableofcontents            % print the table of contents
@@ -200,8 +199,8 @@
 %: ----------------------- list of figures/tables ------------------------
 \begingroup
 %\renewcommand{\listfigurename}{\bfseries LIST OF FIGURES}
-\renewcommand\listfigurename{\centerline{\bfseries\Large LIST OF FIGURES}\global\def\listfigurename{LIST OF FIGURES}}
-%\renewcommand{\listfigurename}{\hfill\bfseries\Large LIST OF FIGURES \hfil}   
+\renewcommand\listfigurename{\centerline{\bfseries\large LIST OF FIGURES}\global\def\listfigurename{LIST OF FIGURES}}
+%\renewcommand{\listfigurename}{\hfill\bfseries\large LIST OF FIGURES \hfil}   
 %\renewcommand{\cftafterloftitle}{\hfill}
 \addtocontents{lof}{\textbf{Figure}\hfill\textbf{Title}\hfill\textbf{Page}\par}
 \renewcommand{\vspace}[2]{}
@@ -269,7 +268,7 @@
 
 \bibliographystyle{Latex/Classes/agsm-umat} % Title is link if provided
 %\renewcommand{\bibname}{\centerline{\textbf{REFERENCES}}} % changes the header; default: Bibliography
-\renewcommand\bibname{\centerline{\bfseries\Large REFERENCES}\global\def\bibname{REFERENCES}}
+\renewcommand\bibname{\centerline{\bfseries\large REFERENCES}\global\def\bibname{REFERENCES}}
 \renewcommand{\vspace}[2]{}
 \bibliography{9_backmatter/references} % adjust this to fit your BibTex file
 
