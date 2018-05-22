@@ -22,7 +22,7 @@ In this chapter, the software (Public Transportation Search Web Portal) developm
 A software development process model is simply the process by which an organization 
 develops software \citep{mayo_software_2016}. It is broken down into several phases, and there are different criteria for each phase \citep{marciniak1994encyclopedia}. The software development model chosen here is the spiral model. This model was chosen due to the exploratory nature of the project.
 
-The spiral model cycles through four quadrants, each representing a particular development phase \cite{boehm_spiral_1988}. The cycle is shown in Figure 3.1.
+The spiral model cycles through four quadrants, each representing a particular development phase \citep{boehm_spiral_1988}. The cycle is shown in Figure 3.1.
 
 \begin{figure}[th!]
 	\centering
@@ -106,14 +106,14 @@ An activity refers to a particular operation of a system. The operations in this
 \section{Implementation}
 The application is set into operation at the implementation stage. This includes how data is taken by the system, what form of data is taken by the system, where the data is kept, how the data is processed and what form of information is outputted. The first step was to collect and map out transport terminals detailed information in some parts of Ghana; including but not limited to:
 \begin{itemize}
-	\item Name
-	\item Location (\textit{Town name})
-	\item Location (\textit{Longitude and Latitude})
-	\item Contacts (\textit{Phone, Email, Website, Operator})
-	\item Operators (\textit{STC, GRPTU, VVIP, VIP})
-	\item Destinations
-	\item Departure times
-	\item Vehicle types
+	\item Name;
+	\item Location (\textit{Town name});
+	\item Location (\textit{Longitude and Latitude});
+	\item Contacts (\textit{Phone, Email, Website, Operator});
+	\item Operators (\textit{STC, GRPTU, VVIP, VIP});
+	\item Destinations;
+	\item Departure times; and
+	\item Vehicle types.
 \end{itemize}
 
 The mapped data was uploaded to OpenStreetMap database. After the mapping of the lorry stations, the mapped data was extracted and processed in QGIS before being imported into the projects local PostgreSQL based database.
@@ -154,9 +154,9 @@ Data was collected using smartphones and handheld GPS receivers. The following i
 The following steps were taken in the mapping out process:
 \begin{itemize}
 	\item Go to \textit{https://www.osm.org} in a modern web browser such as Firefox of Chromium; 
-	\item Searched for town or city where lorry station is to be mapped; and 
+	\item Searched for town or city where lorry station is to be mapped; 
 	\item Area was edited by using JOSM editor as shown in Figure \ref{fig:josm};
-	\item Marking out specific areas (buildings, routes (roads, walkways) and the stations are either mapped as points or closed ways (polygons);  
+	\item Marking out specific areas (buildings, routes (roads, walkways) and the stations are either mapped as points or closed ways (polygons); and
 	\item Naming  and describing of points, areas or routes. 
 \end{itemize}
 
