@@ -418,7 +418,7 @@ MAY 2018
 
 %Statement of originality if required
 
-\newenvironment{declaration} {\begin{alwayssingle} \pagestyle{plain}
+\newenvironment{declaration} {\begin{alwayssingle} \pagestyle{empty}
   \begin{center}
 %  \vspace*{1.0cm}
   {\large \bfseries  DECLARATION}
